@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced selectors</title>
+</head>
+
+<style>
+    .two1[type="text"] {
+        border: 10px dashed rgb(65, 208, 141)
+    }
+
+    .two2[type="text"] {
+        border: 10px dotted rgb(254, 1, 119);
+    }
+
+    ul>li {
+        color: rgb(60, 255, 0);
+        font-size: larger;
+    }
+
+    h1+p {
+        color: rgb(47, 71, 255);
+        font-size: xx-large;
+    }
+
+    a:hover {
+        color: rgb(189, 80, 80);
+        font-size: 50px;
+    }
+
+    a:active {
+        color: blueviolet;
+    }
+
+    a:visited {
+        color: #f5ed00;
+    }
+
+    li:nth-child(2) {
+        font-size: 20px;
+    }
+
+    div:not(parent1) {
+        border: 5px dashed rgb(34, 143, 30);
+
+    }
+
+    .three::after {
+        content: url(star.svg);
+
+    }
+
+    .three::first-letter {
+        font-size: 100px;
+        color: red;
+        font-family: cursive;
+    }
+</style>
+
+<body>
+    <div class="parent1">qwertz</div><br>
+    <br>
+    <div class="parent2">qwerty</div>
+    <!--sibling selectors-->
+    <h1>zxcvbnm</h1>
+    <p>this is para 1</p>
+    <p>this is para 2</p>
+
+
+    <!--attribute selectors-->
+    <form action="#">
+
+        <input class="two1" type="text" placeholder="Enter your name"><br><br>
+        <input class="two2" type="text" placeholder="Enter your last name"><br>
+        <!--child selector-->
+        <ul>
+
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+
+        <!--pseudo classes-->
+        <a href="media 2.html">media file that i created in hw</a>
+
+        <div class="three">Once upon a time.</div>
+
+    </form>
+</body>
+
+</html>
